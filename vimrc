@@ -8,14 +8,18 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " My bundles here:
 
 " original repos on GitHub
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-dispatch'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-rails.git'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
 filetype plugin indent on
 
@@ -70,3 +74,4 @@ au BufNewFile,BufRead *.less set filetype=less
 
 " Auto-reload after making changes to .vimrc
 au! BufWritePost .vimrc source %
+map <leader>nt :execute 'NERDTreeToggle ' .getcwd()<CR>
