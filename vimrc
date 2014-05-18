@@ -3,12 +3,12 @@ let mapleader = ","             " allows for syntax wrapping
 set nocompatible                " inables vim over vi
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My bundles here:
 
@@ -21,10 +21,12 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
+call vundle#end()
 filetype plugin indent on
 
 
 " Settings {
+set mouse=a                     " enables mouse for vim
 set nu	                  			" sets line numbers
 set showcmd                			" display incomplete commands
 set backspace=indent,eol,start	" allows backspace to travel lines
