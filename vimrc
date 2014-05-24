@@ -20,10 +20,17 @@ Plugin 'tpope/vim-rails.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'sickill/vim-monokai.git'
+Plugin 'tomasr/molokai'
 
 call vundle#end()
 filetype plugin indent on
 
+set background=dark
+let g:molokai_original = 1
+
+set t_Co=256
+colorscheme molokai
 
 " Settings {
 set mouse=a                     " enables mouse for vim
@@ -63,14 +70,13 @@ set title                       " allows for changing of title
 set wrap                        " stops vim from auto create new lines
 set cursorline                  " creates cursor line under the cursor 
 set scrolloff=5                 " scrolls at 5 lines from top or bottom
-set background=dark             " set background highlighting to dark
 set hlsearch
 hi Search guibg=LightBlue
 " }
 
 
 " Syntax {
-syntax on
+syntax on 
 au BufNewFile,BufRead *.less set filetype=less
 " }
 

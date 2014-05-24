@@ -68,3 +68,8 @@ export PATH="/usr/local/bin:$PATH:/bin:/usr/sbin:/sbin:/usr/libexec"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
